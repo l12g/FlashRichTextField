@@ -5,10 +5,10 @@
     <movie outputType="Application" />
     <movie input="" />
     <movie path="bin\RichTextField.swf" />
-    <movie fps="30" />
+    <movie fps="60" />
     <movie width="800" />
     <movie height="600" />
-    <movie version="15" />
+    <movie version="17" />
     <movie minorVersion="0" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
@@ -54,6 +54,7 @@
   <!-- SWC Libraries -->
   <libraryPaths>
     <element path="lib\textLayout.swc" />
+    <element path="lib\tlfruntime.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

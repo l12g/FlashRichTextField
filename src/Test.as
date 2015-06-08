@@ -3,6 +3,7 @@ package {
 	import com.bit101.components.PushButton;
 	import flash.display.Sprite;
 	import flash.events.MouseEvent;
+	import flash.events.TextEvent;
 	import flashx.textLayout.container.ContainerController;
 	import flashx.textLayout.conversion.TextConverter;
 	import flashx.textLayout.edit.EditManager;
@@ -47,36 +48,34 @@ package {
 			
 			var rtf:RichText = new RichText();
 			addChild(rtf);
-			rtf.y = 20;
 			
-			rtf.width = 400;
-			rtf.editable = true;
+			rtf.width = stage.stageWidth-20;
 			//rtf.editable = false;
-			//rtf.appendText("Hello World,TextFlow");
+			rtf.appendText("Hello World,TextFlow");
 			//rtf.appendText("---Hello World\nTextFlow");
 			
-			var hb:HBox = new HBox(this);
-			var btn:PushButton = new PushButton(hb, 0, 0, "right", function(e:MouseEvent):void {
-					if (rtf.hasSelection()) {
-						var format:TextLayoutFormat = new TextLayoutFormat();
-						format.color = 0x00ff00;
-						format.fontSize = 20;
-						format.textAlign = TextAlign.CENTER;
-						rtf.setSelectionFormat(format);
-						trace(rtf.htmlText);
-					}
-					
+			//var hb:HBox = new HBox(this);
+			//var btn:PushButton = new PushButton(hb, 0, 0, "right", function(e:MouseEvent):void {
+					//if (rtf.hasSelection()) {
+						//var format:TextLayoutFormat = new TextLayoutFormat();
+						//format.color = 0x00ff00;
+						//format.fontSize = 20;
+						//format.textAlign = TextAlign.CENTER;
+						//rtf.setSelectionFormat(format);
+						//trace(rtf.htmlText);
+					//}
 					//
-				});
-				
-			var b2:PushButton = new PushButton(hb, 0, 0, "insert image",function(e:MouseEvent):void{
-				
-				rtf.insertImage("sk.jpg");
-			})
-			var b3:PushButton = new PushButton(hb, 0, 0, "updateAll",function(e:MouseEvent):void{
-				
-				rtf.updateAll();
-			})
+					////
+				//});
+				//
+			//var b2:PushButton = new PushButton(hb, 0, 0, "insert image",function(e:MouseEvent):void{
+				//
+				//rtf.insertImage("sk.jpg",100,100);
+			//})
+			//var b3:PushButton = new PushButton(hb, 0, 0, "updateAll",function(e:MouseEvent):void{
+				//
+				//rtf.updateAll();
+			//})
 		}
 	
 	}
